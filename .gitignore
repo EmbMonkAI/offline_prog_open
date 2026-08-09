@@ -1,0 +1,75 @@
+# ============================================================
+# .gitignore - STM32CubeMX + MDK-ARM(Keil) 脱机烧录器工程
+# 目的: 忽略编译/链接产生的中间文件与用户级配置
+# 注意: gitignore 不支持行内注释，注释一律单独成行
+# ============================================================
+
+# ---------- Keil MDK-ARM 编译输出目录 ----------
+**/MDK-ARM/Objects/
+**/MDK-ARM/Listings/
+
+# ---------- 编译中间产物 ----------
+*.o
+*.d
+*.obj
+*.crf
+*.iex
+*.axf
+*.elf
+*.lst
+*.htm
+*.dep
+*.sct
+*.lnp
+*.map
+*.lss
+*.su
+*.bin
+*.hex
+
+# ---------- Keil 用户级文件（各机器不同，不入库）----------
+*.uvoptx
+*.uvopt
+*.uvguix.*
+*.uvgui.*
+*.bak
+*.plg
+*.Administrator
+
+# ---------- 其它工具链（GCC / STM32CubeIDE）----------
+Debug/
+Release/
+build/
+*.list
+compile_commands.json
+
+# ---------- 编译日志 ----------
+*.log
+
+# ---------- 调试器日志/配置 ----------
+JLinkLog.txt
+JLinkSettings.ini
+*.JLink
+*.STLink
+
+# ---------- 操作系统 / 编辑器临时文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ---------- Python（PC 端工具 opfp_gen）----------
+__pycache__/
+*.pyc
+*.pyo
+
+
+# ---------- 字库生成工具预览图（生成产物，不入库）----------
+tools/opfp_gen/_*.png
+
+# ---------- PyInstaller 打包产物 ----------
+*.spec
+dist/
+build/
