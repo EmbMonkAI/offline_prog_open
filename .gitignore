@@ -73,3 +73,6 @@ tools/opfp_gen/_*.png
 *.spec
 dist/
 build/
+
+# ---------- 字库源文件（gen_font_* 工具的输入，例外保留）----------
+!modules/app/font_config/kp_font_lib.bin
