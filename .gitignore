@@ -76,3 +76,6 @@ build/
 
 # ---------- 字库源文件（gen_font_* 工具的输入，例外保留）----------
 !modules/app/font_config/kp_font_lib.bin
+
+# ---------- 内部差异档案（描述闭源内容，不入公开仓库） ----------
+docs/
